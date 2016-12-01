@@ -1,0 +1,2 @@
+<div style="display: inline-block">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit facilis dolor est, illum sequi unde illo repudiandae iste rem iure nulla autem veniam cum placeat praesentium, aliquam sapiente at.</div>
