@@ -2,7 +2,7 @@
 /* Основные настройки */
 define(DB_HOST, 'localhost');
 define(DB_LOGIN, 'root');
-define(DB_PASSWORD, 'nikita');
+define(DB_PASSWORD, '1q4w7e');
 define(DB_NAME, 'gbook');
 
 $connect = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASSWORD, DB_NAME);
@@ -40,7 +40,10 @@ $get_sql = "SELECT id, name, email, msg, UNIX_TIMESTAMP(datetime) as dt FROM msg
 $get_res = mysqli_query($connect, $get_sql);
 
 $res_row = mysqli_fetch_all($get_res, MYSQLI_NUM);
-	var_dump($res_row);	
+	//var_dump($res_row);	
+
+        mysqli_close($connect);
+        
 /*while ($res_row = mysqli_fetch_assoc($get_res)) {
 	var_dump($res_row);	
 }*/
@@ -48,3 +51,15 @@ $res_row = mysqli_fetch_all($get_res, MYSQLI_NUM);
 
 /* Вывод записей из БД */
 ?>
+
+<p>всего записей в гостевой книге: <?php echo count($res_row); ?> </p>
+
+<?php 
+foreach ($res_row as $res) {
+    echo "<p><a href='mailto:".$res[2]."'>".$res[1]."в".date('Y-m-d', $res[4]).': '.$res[3]."</a></p>"."<br>";?>
+    <p align="right">
+        <a href="<?php echo $_SERVER['HTTP_HOST']; ?>/index.php?id='<?php echo htmlspecialchars(strip_tags(DB_NAME));?>'&del=<?php echo $res[0]; ?>">Delete</a>
+    </p>
+<?php }
+?>
+

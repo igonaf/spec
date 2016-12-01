@@ -95,3 +95,43 @@
 2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=log
 2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=log
 2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=log
+2016-12-01 | / | 
+2016-12-01 | /index.php?id=log | http://spec.dev/
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=log
+2016-12-01 | / | 
+2016-12-01 | / | 
+2016-12-01 | /index.php?id=gbook | http://spec.dev/
+2016-12-01 | /index.php | http://spec.dev/
+2016-12-01 | /index.php?id=contact | http://spec.dev/index.php
+2016-12-01 | /index.php?id=about | http://spec.dev/index.php?id=contact
+2016-12-01 | /index.php?id=info | http://spec.dev/index.php?id=about
+2016-12-01 | /index.php | http://spec.dev/test/index.php
+2016-12-01 | / | 
+2016-12-01 | /index.php?id=gbook | http://spec.dev/
+2016-12-01 | /index.php?id=gbook | http://spec.dev/
+2016-12-01 | /index.php?id=gbook | http://spec.dev/
+2016-12-01 | / | 
+2016-12-01 | /index.php | http://spec.dev/
+2016-12-01 | /index.php?id=contact | http://spec.dev/index.php
+2016-12-01 | /index.php?id=about | http://spec.dev/index.php?id=contact
+2016-12-01 | /index.php?id=info | http://spec.dev/index.php?id=about
+2016-12-01 | /index.php?id=log | http://spec.dev/index.php?id=info
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=log
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=log
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=log
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
+2016-12-01 | /index.php?id=gbook | http://spec.dev/index.php?id=gbook
