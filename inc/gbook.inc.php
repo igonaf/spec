@@ -6,19 +6,39 @@ define(DB_PASSWORD, '1q4w7e');
 define(DB_NAME, 'gbook');
 
 $connect = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASSWORD, DB_NAME);
+
+function clearStr($data){
+    global $connect;
+    return mysqli_real_escape_string($connect, trim(strip_tags($data)));
+}
+
 /* Основные настройки */
 
 /* Сохранение записи в БД */
 if ($_SERVER['REQUEST_METHOD']=='POST') {
-	$name = trim(strip_tags($_POST['name']));
-	$email = trim(strip_tags($_POST['email']));
-	$msg = trim(strip_tags($_POST['msg']));
+	$name = clearStr($_POST['name'], $connect);
+	$email = clearStr($_POST['email']);
+	$msg = clearStr($_POST['msg']);
 
-	$res_ins = mysqli_query($connect, "INSERT INTO msgs (name, email, msg) VALUES ('$name', '$email', '$msg')");
+	$res_ins = mysqli_query($connect, "INSERT INTO msgs (name, email, msg) VALUES ('$name', '$email', '$msg')") or mysqli_error($connect);
+         
 }
 /* Сохранение записи в БД */
 
 /* Удаление записи из БД */
+
+if ($_SERVER['REQUEST_METHOD']=='GET'){
+    $data_base = clearStr($_GET['id']);
+    if ($data_base == DB_NAME) {
+        $del = clearStr($_GET['del']);
+        if ($del) {
+            $del_query = mysqli_query($connect, "DELETE FROM msgs WHERE msgs.id=$del");
+            if ($del_query) {
+                echo "Запись №$del удалена";
+            }
+        }
+    }
+}
 
 /* Удаление записи из БД */
 ?>
@@ -55,10 +75,10 @@ $res_row = mysqli_fetch_all($get_res, MYSQLI_NUM);
 <p>всего записей в гостевой книге: <?php echo count($res_row); ?> </p>
 
 <?php 
-foreach ($res_row as $res) {
-    echo "<p><a href='mailto:".$res[2]."'>".$res[1]."в".date('Y-m-d', $res[4]).': '.$res[3]."</a></p>"."<br>";?>
+foreach ($res_row as $res) { ?>
+    <p align="left"><a href="mailto:<?php echo $res[2];?>"><?php echo $res[1];?></a> в <?php echo date('Y-m-d h-m-s', $res[4]); ?> написал <?php echo $res[3]; ?></p><br>
     <p align="right">
-        <a href="<?php echo $_SERVER['HTTP_HOST']; ?>/index.php?id='<?php echo htmlspecialchars(strip_tags(DB_NAME));?>'&del=<?php echo $res[0]; ?>">Delete</a>
+        <a href="/index.php?id=<?php echo htmlspecialchars(strip_tags(DB_NAME));?>&del=<?php echo $res[0]; ?>">Delete</a>
     </p>
 <?php }
 ?>
