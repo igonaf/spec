@@ -1,4 +1,4 @@
-<?
+<?php
 require_once "secure/session.inc.php";
 require_once "secure/secure.inc.php";
 ?>
