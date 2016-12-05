@@ -163,3 +163,9 @@
 2016-12-02 | /index.php?id=contact | http://spec.dev/index.php?id=gbook&del=17
 2016-12-02 | /index.php?id=gbook | http://spec.dev/index.php?id=contact
 2016-12-02 | /index.php?id=gbook | http://spec.dev/index.php?id=contact
+2016-12-03 | /index.php?id=gbook | http://spec.dev/index.php?id=log
+2016-12-03 | /index.php?id=gbook | http://spec.dev/index.php?id=log
+2016-12-03 | /index.php?id=gbook&del=7 | http://spec.dev/index.php?id=gbook
+2016-12-03 | /index.php?id=gbook&del=5 | http://spec.dev/index.php?id=gbook&del=7
+2016-12-05 | /index.php?id=gbook&del=5 | http://spec.dev/index.php?id=gbook&del=7
+2016-12-05 | / | 
