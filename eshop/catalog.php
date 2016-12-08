@@ -21,7 +21,7 @@
 </tr>
 <?php
 $goods = selectAllItems();
-if ($goods) {
+if (is_array($goods)) {
 foreach ($goods as $item) {?>
 <tr>
     <td><?php echo $item['title']; ?></td>
